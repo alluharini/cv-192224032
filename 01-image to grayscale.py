@@ -1,9 +1,7 @@
-import cv2 
-import numpy as np 
-kernel = np.ones((5,5),np.uint8) 
-print(kernel) 
-path = "C:\cv\example 1.jpg"
-img =cv2.imread(path) 
-imgGray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY) 
-cv2.imshow("GrayScale",imgGray) 
+import cv2
+image = cv2.imread("C:\cv\example 5.jpeg")
+gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+cv2.imshow('Original Image', image)
+cv2.imshow('Grayscale Image', gray_image)
 cv2.waitKey(0)
+cv2.destroyAllWindows()
