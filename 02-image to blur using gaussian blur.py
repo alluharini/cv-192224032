@@ -1,10 +1,5 @@
-import cv2 
-import numpy as np 
-kernel = np.ones((5,5),np.uint8) 
-print(kernel) 
-path = "C:\cv\example 2.jpg" 
-img =cv2.imread(path) 
-imgGray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY) 
-imgBlur = cv2.GaussianBlur(imgGray,(7,7),0) 
-cv2.imshow("Img Blur",imgBlur) 
-cv2.waitKey(0)
+import cv2
+image=cv2.imread("C:\cv\example 5.jpeg")
+g_i=cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
+b_i=cv2.GaussianBlur(g_i,(7,7),0)
+cv2.imshow("blur",b_i)
